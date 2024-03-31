@@ -10,6 +10,19 @@ This project is a simple web application that allows users to authorize and sele
 - **Category Selection**: Authenticated users can select categories they are interested in from a list.
 - **Persistent Data Storage**: User data and selected categories are stored securely in a PostgreSQL database hosted on [Neon](https://neon.tech/).
 
+
+
+## Technologies Used
+
+The entire application is built using [T3 stack](https://create.t3.gg/) which comprises of the following technologies.
+
+- **Next.js**: React framework for building full stack applications with server side rendering and static site generation.
+- **Tailwind CSS**: CSS framework for styling.
+- **TRPC**: Framework for writing efficient TypeScript-powered APIs. It minimizes the effort in maintaining types for same data in both client and server.
+- **Prisma**: The ORM for efficient communication between application and database.
+- **PostgreSQL**: Open-source relational database management system.
+
+
 ## Installation
 
 1. Clone the repository:
@@ -75,16 +88,12 @@ This project is a simple web application that allows users to authorize and sele
 
 - To log out, simply click on the **Log Out** button on the top-right.
 
+## Future Enhancements
 
-## Technologies Used
+1. A search functionality to easily filter through the categories
 
-The entire application is built using [T3 stack](https://create.t3.gg/) which comprises of the following technologies.
+2. Caching mechanism to prevent repeated API calls and improve application's speed.
 
-- **Next.js**: React framework for building full stack applications with server side rendering and static site generation.
-- **Tailwind CSS**: CSS framework for styling.
-- **TRPC**: Framework for writing efficient TypeScript-powered APIs. It minimizes the effort in maintaining types for same data in both client and server.
-- **Prisma**: The ORM for efficient communication between application and database.
-- **PostgreSQL**: Open-source relational database management system.
 
 ## Any Queries?
 
