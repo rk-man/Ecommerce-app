@@ -1,29 +1,94 @@
-# Create T3 App
+# ECOMMERCE APP
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## Description
 
-## What's next? How do I make an app with this?
+This project is a simple web application that allows users to authorize and select categories they are interested in. It utilizes the [T3 framework](https://create.t3.gg/), which consists of Next.js for the frontend, Tailwind CSS for styling, TRPC for API handling, Prisma for database management, and PostgreSQL hosted on [Neon](https://neon.tech/) for data storage.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Features
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- **User Authorization**: Users can sign up, log in, and log out securely.
+- **Category Selection**: Authenticated users can select categories they are interested in from a list.
+- **Persistent Data Storage**: User data and selected categories are stored securely in a PostgreSQL database hosted on [Neon](https://neon.tech/).
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+    ```bash
+    git clone https://github.com/your-username/Ecommerce-app.git
+    ```
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+2. Navigate to the project directory:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+    ```bash
+    cd Ecommerce-app
+    ```
 
-## How do I deploy this?
+3. Set up environment variables:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- Create a `.env` file in the root directory and add the following variables:
+
+    ```bash
+    DATABASE_URL=YOUR_DATABASE_URL
+    AUTH_SECRET_KEY=YOUR_AUTH_SECRET_KEY
+
+    EMAIL_USER=YOUR_EMAIL
+    EMAIL_PASSWORD=YOUR_APP_PASSWORD
+
+    FRONTEND_URL=http://localhost:3000
+    ```
+
+4. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+5. Run the development server:
+
+
+- Push the schema or tables to the Postgres DB
+    ```bash
+    npm run db:push
+    ```
+
+- Run the application
+    ```bash
+    npm run dev
+    ```
+
+6. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Usage
+
+1. **Sign Up:**
+
+- Register your account which will take you to the home page
+- Verify your email. The code will be sent to your email id.
+
+2. **Go to Categories:**
+
+- In the home page, click on the **visit categories** button. 
+- Browse through the available categories and select the ones you are interested in by clicking on them.
+
+4. **Log Out:**
+
+- To log out, simply click on the **Log Out** button on the top-right.
+
+
+## Technologies Used
+
+The entire application is built using [T3 stack](https://create.t3.gg/) which comprises of the following technologies.
+
+- **Next.js**: React framework for building full stack applications with server side rendering and static site generation.
+- **Tailwind CSS**: CSS framework for styling.
+- **TRPC**: Framework for writing efficient TypeScript-powered APIs. It minimizes the effort in maintaining types for same data in both client and server.
+- **Prisma**: The ORM for efficient communication between application and database.
+- **PostgreSQL**: Open-source relational database management system.
+
+## Any Queries?
+
+Reach out to me at naveenrk.official@gmail.com or in any of my following social media accounts.
+
+- [Instagram](https://instagram.com/naveen.rk_)
+- [LinkedIn](https://linkedin.com/in/naveen-rk)
