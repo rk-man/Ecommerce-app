@@ -16,7 +16,7 @@ export async function sendMail(email: string, code: string) {
     to: email, // list of receivers
     subject: "Confirm your email!", // Subject line
     text: `Here's your confirmation code : ${code} Click here`, // plain text body
-    html: `<h1>Here's your confirmation code : ${code}</h1><a href = "${process.env.FRONTEND_URL}/user/verify">Click here</a>`, // html body
+    html: `<h2>Here's your confirmation code : ${code}</h2>`, // html body
   });
 
   return emailRes;
