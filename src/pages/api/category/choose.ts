@@ -43,8 +43,6 @@ const chooseHanlder = async (req: NextApiRequest, res: NextApiResponse) => {
       message: "Something went wrong",
     });
   }
-
-  res.status(500).json({ message: "Internal server error" });
 };
 
 export default chooseHanlder;

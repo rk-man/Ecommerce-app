@@ -1,10 +1,8 @@
 import { type NextApiRequest, type NextApiResponse } from "next";
 import { createCaller } from "../../../server/api/root";
 import { createTRPCContext } from "../../../server/api/trpc";
-import { NextResponse } from "next/server";
 import cookie from "cookie";
-import { comparePassword, decryptToken } from "@/helpers/validation";
-import { JwtPayload } from "jsonwebtoken";
+import { comparePassword } from "@/helpers/validation";
 import { encryptToken } from "@/helpers/validation";
 
 const loginHandler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -54,7 +52,7 @@ const loginHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     });
   }
 
-  res.status(500).json({ message: "Internal server error" });
+  // res.status(500).json({ message: "Internal server error" });
 };
 
 export default loginHandler;

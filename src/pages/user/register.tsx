@@ -26,14 +26,10 @@ function RegisterPage() {
     }
   }, [authUser]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password || !name) return;
-    registerUser(email, name, password)
-      .then((res) => {})
-      .catch((err) => {
-        console.log(err);
-      });
+    await registerUser(email, name, password);
   };
 
   return (

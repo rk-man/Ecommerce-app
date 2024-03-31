@@ -92,7 +92,7 @@ function index() {
         },
       );
 
-      handleGetCategories();
+      await handleGetCategories();
     } catch (err: any) {
       toast.error(err.response.data.message);
     }

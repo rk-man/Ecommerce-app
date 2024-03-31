@@ -29,16 +29,10 @@ function LoginPage() {
     }
   }, [authUser]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password) return;
-    loginUser(email, password)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    await loginUser(email, password);
   };
 
   return (
