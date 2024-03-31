@@ -23,12 +23,12 @@ function VerifyUserPage() {
     }
   }, [authUser]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let otp_str = OTP.join("");
     if (otp_str.length < 8) return;
 
-    verifyUser(otp_str);
+    await verifyUser(otp_str);
   };
 
   return (

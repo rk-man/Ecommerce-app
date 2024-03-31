@@ -29,7 +29,11 @@ function RegisterPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password || !name) return;
-    registerUser(email, name, password);
+    registerUser(email, name, password)
+      .then((res) => {})
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
