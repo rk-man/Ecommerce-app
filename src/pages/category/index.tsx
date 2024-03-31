@@ -98,6 +98,23 @@ function index() {
     }
   };
 
+  const handleDeselectCategories = async (selectedCategory: string) => {
+    try {
+      setLoading(true);
+      await axios.post(
+        "/api/category/deselect",
+        {
+          category_id: selectedCategory,
+        },
+        {
+          withCredentials: true,
+        },
+      );
+
+      await handleGetCategories();
+    } catch (err) {}
+  };
+
   const handleGetCategories = async () => {
     try {
       const api_res = await axios.get("/api/category", {
@@ -145,7 +162,9 @@ function index() {
                           authUser.user ? authUser.user.id : "",
                         )}
                         onChange={(e) => {
-                          handleChooseCategories(e.target.id);
+                          if (e.target.checked === false)
+                            handleDeselectCategories(e.target.id);
+                          else handleChooseCategories(e.target.id);
                         }}
                       />
                       <p className="text-[16px]">{item.title}</p>
