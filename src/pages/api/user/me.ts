@@ -39,8 +39,6 @@ const loginHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       message: "Couldn't login. Something went wrong",
     });
   }
-
-  res.status(500).json({ message: "Internal server error" });
 };
 
 export default loginHandler;

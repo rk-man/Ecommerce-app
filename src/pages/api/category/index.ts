@@ -43,8 +43,6 @@ const getCategoriesHandler = async (
       message: "Something went wrong",
     });
   }
-
-  res.status(500).json({ message: "Internal server error" });
 };
 
 export default getCategoriesHandler;

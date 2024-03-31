@@ -23,8 +23,6 @@ const logoutHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       message: "Couldn't logout. Something went wrong",
     });
   }
-
-  res.status(500).json({ message: "Internal server error" });
 };
 
 export default logoutHandler;

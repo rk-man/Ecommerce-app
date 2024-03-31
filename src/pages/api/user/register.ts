@@ -68,9 +68,6 @@ const registerHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       message: "something went wrong",
     });
   }
-  // Another error occurred
-
-  res.status(500).json({ message: "Internal server error" });
 };
 
 export default registerHandler;
